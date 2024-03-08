@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import axios from "axios";
 
-axios.defaults.baseURL = 'http://192.168.201.153:7878/';
+axios.defaults.baseURL = 'https://luvhub-api-v1.vercel.app/';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
