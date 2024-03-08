@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-
+import axios from 'axios';
+import LoginPage from './components/UserAuth/LoginPage';
+import SignupPage from './components/UserAuth/SignupPage';
+import LandingPage from './components/HomePage/LandingPage';
+import UserDashboard from './components/UserDashboard/UserDashboard';
+import UserNavbar from './components/UserDashboard/UserNavbar';
+import AddCrushPage from './components/UserDashboard/AddCrush';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/sign-up" element={<SignupPage />} />
+        <Route path="/user-dashboard" element={<UserDashboard />} />
+        <Route path="/add-crush" element={<AddCrushPage />} />
+      </Routes>
+    </Router>
+
   );
 }
 

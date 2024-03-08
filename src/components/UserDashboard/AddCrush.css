@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+.outer-container-addcrush {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container-addcrush {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container span {
+  position: absolute;
+  left: 0;
+  width: 32px;
+  height: 6px;
+  background: #2c4766;
+  border-radius: 8px;
+  transform-origin: 128px;
+  transform: scale(2.2) rotate(calc(var(--i) * (360deg / 50)));
+  animation: animateBlink 3s linear infinite;
+  animation-delay: calc(var(--i) * (3s / 50));
+}
+
+@keyframes animateBlink {
+  0% {
+    background: #0ef;
+  }
+
+  25% {
+    background: #2c4766;
+  }
+}
+
+.login-box {
+  position: absolute;
+}
+
+.login-box form {
+  width: 100%;
+  padding: 0 50px;
+}
+
+h2 {
+  font-size: 2em;
+  color: #0ef;
+  text-align: center;
+}
+
+.add-crush-input-box {
+  position: relative;
+  margin: 25px 0;
+}
+
+.add-crush-input-box input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #2c4766;
+  outline: none;
+  border-radius: 40px;
+  font-size: 1em;
+  color: #fff;
+  padding: 0 20px;
+  transition: .5s ease;
+}
+
+.add-crush-input-box input:focus,
+.add-crush-input-box input:valid {
+  border-color: #0ef;
+}
+
+.add-crush-input-box label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s ease;
+}
+
+.add-crush-input-box input:focus~label,
+.add-crush-input-box input:valid~label {
+  top: 1px;
+  font-size: .8em;
+  background: #1f293a;
+  padding: 0 6px;
+  color: #0ef;
+}
+
+
+.btn-addcrush {
+  width: 100%;
+  height: 45px;
+  background: #0ef;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #1f293a;
+  font-weight: 600;
+}
